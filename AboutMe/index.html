@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../public/styles/home.css">
+
     <style>
         .container {}
         
@@ -12,10 +14,37 @@
             display: flex;
             justify-content: space-around;
         }
+        
+        a.home {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            margin: 10px;
+            padding: 10px;
+            z-index: 1;
+            border: 1px solid red;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            background-color: #ccc;
+            color: white;
+            transition: .3s;
+        }
+        
+        a.home:hover {
+            background-color: #eee;
+        }
     </style>
 </head>
 
 <body>
+    <a class="home" href="/BingFengHung.github.io/">
+        <i class="material-icons">home</i>
+    </a>
     <h3>關於我</h3>
 
     <p>我本身是射手座，對於有興趣的事物往往會一頭熱的栽進去，探究其中的原因；因為這個特質，讓我在接觸到程式時，發現程式語言的奧妙與有趣的地方，也因為學習程式語言讓我在邏輯處理方面的思維有很大的躍進，對於處裡各方面的事務更有條理。</p>
