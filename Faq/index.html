@@ -5,10 +5,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        
+        .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 20%;
+        }
+        
+        .tablink:hover {
+            background-color: #777;
+        }
+        
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 50px;
+            text-align: center;
+        }
+        
+        #csharp {
+            background-color: red;
+        }
+        
+        #javascript {
+            background-color: green;
+        }
+        
+        #python {
+            background-color: blue;
+        }
+        
+        #linux {
+            background-color: orange;
+        }
+        
+        #others {
+            background-color: yellowgreen;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="csharp" class="tabcontent">
+        <h1>C#</h1>
+        <p>C# / WPF 經驗談</p>
+    </div>
 
+    <div id="javascript" class="tabcontent">
+        <h1>JavaScript</h1>
+        <p>JavaScript 最被誤會的語言</p>
+    </div>
+
+    <div id="python" class="tabcontent">
+        <h1>Python</h1>
+        <p>Python 當代 AI 熱門語言首選</p>
+    </div>
+
+    <div id="linux" class="tabcontent">
+        <h1>Linux</h1>
+        <p>Linux 無所不在的 OS 系統</p>
+    </div>
+
+    <div id="others" class="tabcontent">
+        <h1>Others</h1>
+        <p>Others 雜談</p>
+    </div>
+
+    <button id='defaultOpen' class="tablink" onclick="openTab('csharp', this, 'red')">C#</button>
+    <button class="tablink" onclick="openTab('javascript', this, 'green')">JavaScript</button>
+    <button class="tablink" onclick="openTab('python', this, 'blue')">Python</button>
+    <button class="tablink" onclick="openTab('linux', this, 'orange')">Linux</button>
+    <button class="tablink" onclick="openTab('others', this, 'yellowgreen')">其他</button>
+
+    <!-- Content -->
+    <div id="csharp_content" class="content">
+        <ul>
+            <li>C# - Tuple</li>
+            <li>C# - GCHandle</li>
+            <li>C# - Lay 延遲物件實例化</li>
+            <li>C# sbyte 轉換為 string</li>
+        </ul>
+    </div>
+
+    <div id="javascript_cotnent" class="content">
+        <ul>
+            <li>Node.js module.exports 與 exports 之間的差異</li>
+            <li>JavaScript 函式多型實作</li>
+        </ul>
+    </div>
+
+    <div id="python_content" class="content">
+        <ul>
+            <li>Python 函式基本教學</li>
+        </ul>
+    </div>
+
+    <div id="linux_content" class="content">
+
+    </div>
+
+    <div id="others_content" class="content">
+        <ul>
+            <li>Git 版本管控 - git commit message 簽章功能</li>
+        </ul>
+    </div>
+
+    <script>
+        function openTab(title, elmnt, color) {
+            let tabcontent, tablinks, content;
+
+            tabcontent = document.getElementsByClassName('tabcontent');
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = 'none';
+            }
+
+            content = document.getElementsByClassName('content');
+            for (let i = 0; i < content.length; i++) {
+                content[i].style.display = 'none';
+            }
+
+            tablinks = document.getElementsByClassName('tablink');
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+
+            document.getElementById(title).style.display = 'block';
+            document.getElementById(`${title}_content`).style.display = 'block';
+            elmnt.style.backgroundColor = color;
+        }
+        document.getElementById('defaultOpen').click()
+            // document.getelem("defaultOpen").click();
+    </script>
 </body>
+
 
 </html>
