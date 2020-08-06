@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="../public/styles/home.css">
     <title>Faq</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
         body {
             font-family: 'Lato', sans-serif;
         }
@@ -60,6 +65,19 @@
             border: 1px solid #ccc;
             height: 100%;
         }
+        
+        li {
+            margin: 0 10px;
+        }
+        
+        li a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        li a:hover {
+            color: blue;
+        }
     </style>
 </head>
 
@@ -101,37 +119,37 @@
     <!-- Content -->
     <div id="csharp_content" class="content">
         <ul>
-            <li>C# - Tuple</li>
-            <li>C# - GCHandle</li>
-            <li>C# - Lay 延遲物件實例化</li>
-            <li>C# sbyte 轉換為 string</li>
-            <li>WPF DataContext 與 Binding 之間的概念</li>
+            <li><a href="#">C# - Tuple</a></li>
+            <li><a href="#">C# - GCHandle</a></li>
+            <li><a href="#">C# - Lazy 延遲物件實例化</a></li>
+            <li><a href="#">C# - sbyte 轉換為 string</a></li>
+            <li><a href="#">WPF - DataContext 與 Binding 之間的概念</a></li>
         </ul>
     </div>
 
     <div id="javascript_content" class="content">
         <ul>
-            <li>Node.js module.exports 與 exports 之間的差異</li>
-            <li>JavaScript 函式多型實作</li>
+            <li><a href="#">Node.js module.exports 與 exports 之間的差異</a></li>
+            <li><a href="#">JavaScript 函式多型實作</a></li>
         </ul>
     </div>
 
     <div id="python_content" class="content">
         <ul>
-            <li>Python 函式基本教學</li>
+            <li><a href="#">Python 函式基本教學</a></li>
         </ul>
     </div>
 
     <div id="linux_content" class="content">
         <ul>
-            <li>Windows 使用 SCP 傳送檔案至 Linux</li>
-            <li>Linux 開機自動執行指令</li>
+            <li><a href="#">Windows 使用 SCP 傳送檔案至 Linux</a></li>
+            <li><a href="#">Linux 開機自動執行指令</a></li>
         </ul>
     </div>
 
     <div id="others_content" class="content">
         <ul>
-            <li>Git 版本管控 - git commit message 簽章功能</li>
+            <li><a href="#">Git 版本管控 - git commit message 簽章功能</a></li>
         </ul>
     </div>
 
