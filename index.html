@@ -19,6 +19,10 @@
         
         .container img {
             vertical-align: middle;
+            margin: 0 auto;
+            width: 100%;
+            height: 800px;
+            object-fit: cover;
         }
         
         .container .content {
@@ -28,7 +32,17 @@
             background: rgba(0, 0, 0, .5);
             color: #f1f1f1;
             width: 100%;
-            padding: 20%;
+            padding: 10%;
+        }
+        
+        .content h1 {
+            font-size: 2.8rem;
+            margin: 15px 0px;
+        }
+        
+        .content p {
+            padding: 20px 5px;
+            font-size: 1.5rem;
         }
         
         body {
@@ -72,7 +86,6 @@
         
         #main {
             transition: margin-left .5s;
-            padding: 16px;
         }
         
         span {
@@ -82,6 +95,7 @@
             float: left;
             z-index: 1;
             color: white;
+            padding: 10px;
         }
         
         @media screen and (max-height: 450px) {
@@ -91,6 +105,30 @@
             .sidenav a {
                 font-size: 18px;
             }
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+            transition: .3s;
+            width: 40%;
+            margin: 10px;
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        .article {
+            width: 75%;
+            margin: 0 auto;
+        }
+        
+        .article_area {
+            padding: 8px 16px;
+        }
+        
+        .area_row {
+            display: flex;
         }
     </style>
 </head>
@@ -107,29 +145,127 @@
     <div id="main">
         <div class="container">
             <span onclick="openNav()">&#9776;</span>
-            <img src="public/images/playground.jpg" alt="playground" style="width: 100%;">
+            <img src="public/images/playground.jpg" alt="playground">
             <div class="content">
                 <h1>Welcome</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius a natus ullam impedit culpa corrupti iure porro vel ipsa illo similique voluptatem, provident laboriosam ad necessitatibus eos distinctio nam maxime.</p>
+                <p id='essay_cht'></p>
+                <p id='essay_eng'></p>
             </div>
         </div>
-
-
-        <script>
-            function openNav() {
-                document.getElementById('mySidenav').style.width = '250px';
-
-                document.getElementById('main').style.marginLeft = '250px';
-                document.body.style.backgroundColor = "rgba(0, 0, 0,.4)";
-            }
-
-            function closeNav() {
-                document.getElementById('mySidenav').style.width = '0';
-                document.getElementById('main').style.marginLeft = '0';
-                document.body.style.backgroundColor = 'white';
-            }
-        </script>
     </div>
+
+    <div class="article">
+        <h2>近期文章</h2>
+        <div class="area_row">
+            <div class="card">
+                <img src="" alt="" width="100%">
+                <div class="article_area">
+                    <h4><b>Python</b></h4>
+                    <p>Python 函式基本教學</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="" alt="">
+                <div class="article_area">
+                    <h4><b>C#</b></h4>
+                    <p>sbyte 轉換為 string</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="" alt="">
+                <div class="article_area">
+                    <h4><b>JavaScript</b></h4>
+                    <p>Node.js module.exports 與 exports 之間的差異</p>
+                </div>
+            </div>
+        </div>
+        <div class="area_row">
+            <div class="card">
+                <img src="" alt="">
+                <div class="article_area">
+                    <h4><b>Linux</b></h4>
+                    <p>Linux 開機自動執行指令</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="" alt="">
+                <div class="article_area">
+                    <h4><b>Linux</b></h4>
+                    <p>Windows 使用 SCP 傳送檔案至 Linux </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="" alt="">
+                <div class="article_area">
+                    <h4><b>其他</b></h4>
+                    <p>Git 版本管控 - git commit message 簽章功能</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById('mySidenav').style.width = '250px';
+
+            document.getElementById('main').style.marginLeft = '250px';
+            document.body.style.backgroundColor = "rgba(0, 0, 0,.4)";
+        }
+
+        function closeNav() {
+            document.getElementById('mySidenav').style.width = '0';
+            document.getElementById('main').style.marginLeft = '0';
+            document.body.style.backgroundColor = 'white';
+        }
+
+        typeWriter();
+
+        function typeWriter() {
+            var i = 0;
+            var j = 0
+            var chit = "艱難知識無樂趣，有趣之事不艱難";
+            var eng = "What is hard, isn't fun. What is fun isn't hard."
+
+            var el_chit = document.getElementById("essay_cht");
+            var el_eng = document.getElementById("essay_eng");
+
+            function chit_loop() {
+                if (i < chit.length) {
+                    el_chit.innerHTML += chit.charAt(i);
+                    i++;
+                }
+
+                if (j < eng.length) {
+                    el_eng.innerHTML += eng.charAt(j);
+                    j++;
+                }
+
+                if (i < chit.length) {
+                    setTimeout(chit_loop, 170);
+                }
+            }
+
+            function eng_loop() {
+                if (j < eng.length) {
+                    el_eng.innerHTML += eng.charAt(j);
+                    j++;
+                }
+
+                if (j < eng.length) {
+                    setTimeout(eng_loop, 90);
+                }
+            }
+
+            chit_loop();
+            eng_loop();
+
+            // setInterval(loop, 50);
+        }
+    </script>
 </body>
 
 </html>
