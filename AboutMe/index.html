@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../public/styles/header.css">
     <link rel="stylesheet" href="../public/styles/home.css">
+
 
     <style>
         * {
@@ -21,8 +23,7 @@
             padding: 0;
             margin: 0;
         }
-        
-        header {
+        /* header {
             padding: 3px 16px;
             top: 0;
             background: #adccc3;
@@ -30,7 +31,7 @@
             position: sticky;
             z-index: 1;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, .19);
-        }
+        } */
         
         .container {
             padding: 20px 30px;
@@ -84,8 +85,20 @@
     </a>
 
     <header>
-        <h2>Header</h2>
+        <div class="logo">
+            <a href="./">BingFeng</a>
+        </div>
+        <div class="topnav" id='myTopnav'>
+            <a href='javascript:void(0);' class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="AboutMe/">關於我</a>
+            <a href="Portfolio/">作品集</a>
+            <a href="Faq/">FAQ</a>
+        </div>
     </header>
+
+    <!-- <header>
+        <h2>Header</h2>
+    </header> -->
 
     <div class="container">
         <div class="personal_info">
@@ -227,6 +240,18 @@
         tHis
 
     </footer>
+
+    <script>
+        function myFunction() {
+            let x = document.getElementById('myTopnav');
+
+            if (x.className === 'topnav') {
+                x.className += ' responsive';
+            } else {
+                x.className = 'topnav';
+            }
+        }
+    </script>
 </body>
 
 </html>
