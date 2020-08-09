@@ -78,19 +78,23 @@
             padding: 10px 12px;
             border: 1px solid #ccc;
             height: 100%;
+            display: flex;
+            flex-wrap: wrap;
         }
         
-        li {
-            margin: 0 10px;
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+            transition: .3s;
+            width: 30%;
+            margin: 10px 10px;
         }
         
-        li a {
-            text-decoration: none;
-            color: black;
+        .card img {
+            width: 100%;
         }
         
-        li a:hover {
-            color: blue;
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
         }
     </style>
 </head>
@@ -146,41 +150,15 @@
         <button class="tablink" onclick="openTab('others', this, 'yellowgreen')">其他</button>
 
         <!-- Content -->
-        <div id="csharp_content" class="content">
-            <ul>
-                <li><a href="#">C# - Tuple</a></li>
-                <li><a href="#">C# - GCHandle</a></li>
-                <li><a href="#">C# - Lazy 延遲物件實例化</a></li>
-                <li><a href="#">C# - sbyte 轉換為 string</a></li>
-                <li><a href="#">WPF - DataContext 與 Binding 之間的概念</a></li>
-            </ul>
-        </div>
+        <div id="csharp_content" class="content"></div>
 
-        <div id="javascript_content" class="content">
-            <ul>
-                <li><a href="#">Node.js module.exports 與 exports 之間的差異</a></li>
-                <li><a href="#">JavaScript 函式多型實作</a></li>
-            </ul>
-        </div>
+        <div id="javascript_content" class="content"> </div>
 
-        <div id="python_content" class="content">
-            <ul>
-                <li><a href="#">Python 函式基本教學</a></li>
-            </ul>
-        </div>
+        <div id="python_content" class="content"> </div>
 
-        <div id="linux_content" class="content">
-            <ul>
-                <li><a href="#">Windows 使用 SCP 傳送檔案至 Linux</a></li>
-                <li><a href="#">Linux 開機自動執行指令</a></li>
-            </ul>
-        </div>
+        <div id="linux_content" class="content"> </div>
 
-        <div id="others_content" class="content">
-            <ul>
-                <li><a href="#">Git 版本管控 - git commit message 簽章功能</a></li>
-            </ul>
-        </div>
+        <div id="others_content" class="content"> </div>
     </div>
 
     <footer>
@@ -188,6 +166,73 @@
     </footer>
 
     <script>
+        getArticles();
+
+        function getArticles() {
+            let csharpContent = document.getElementById("csharp_content");
+
+            let javascriptContent = document.getElementById('javascript_content');
+            let pythonContent = document.getElementById("python_content");
+            let linuxContent = document.getElementById('linux_content');
+            let othersContent = document.getElementById('others_content');
+
+            fetch('./Articles.json').then(res => res.json())
+                .then(data => {
+                    let CSharp = data.CSharp;
+                    let JavaScript = data.JavaScript
+                    let Python = data.Python;
+                    let Linux = data.Linux;
+                    let Others = data.Others;
+
+                    CSharp.forEach(element => {
+                        createElement(element, csharpContent);
+                    });
+
+                    JavaScript.forEach(element => {
+                        createElement(element, javascriptContent);
+                    });
+
+                    Python.forEach(element => {
+                        createElement(element, pythonContent);
+                    });
+
+                    Linux.forEach(element => {
+                        createElement(element, linuxContent);
+                    })
+                    Others.forEach(element => {
+                        createElement(element, othersContent);
+                    })
+                });
+
+            function createElement(element, parentElement) {
+                let el = createCardTemplate(element.title, element.description, element.img, element.link);
+                parentElement.appendChild(el);
+            }
+        }
+
+        function setValue(link) {
+            localStorage.setItem("links", link);
+            return true;
+        }
+
+        function createCardTemplate(title, description, imgSrc, link) {
+            let divElement = document.createElement('div');
+            divElement.className = 'card';
+
+            divElement.innerHTML = `
+               <a href='./Data/data.html' onclick='setValue("${link}");'>
+                  <img src=../${imgSrc}>
+                  <div class='card-container'>
+                     <h4><b>${title}</b></h4>
+                     <p>${description}</p>
+                  </div>
+               </a>`;
+
+            return divElement;
+        }
+
+
+
         function openTab(title, elmnt, color) {
             let tabcontent, tablinks, content;
 
@@ -207,7 +252,7 @@
             }
 
             document.getElementById(title).style.display = 'block';
-            document.getElementById(`${title}_content`).style.display = 'block';
+            document.getElementById(`${title}_content`).style.display = 'flex';
             elmnt.style.backgroundColor = color;
         }
         document.getElementById('defaultOpen').click()

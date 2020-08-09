@@ -1,0 +1,57 @@
+{
+    "CSharp": [{
+            "title": "C# Tuple 型別",
+            "description": "C# Tuple 類型介紹",
+            "link": "xxx.md",
+            "img": "xxx"
+        },
+        {
+            "title": "C# GCHandle",
+            "description": "記憶體垃圾回搜機制說明",
+            "link": "xxx.md",
+            "img": "xxx"
+        }, {
+            "title": "C# Lazy 延遲物件實例化",
+            "description": "物件延遲建立",
+            "link": "xxx.md",
+            "img": "xxx"
+        }, {
+            "title": "C# - sbyte 轉換為 string",
+            "description": "sbyte 轉為 string",
+            "link": "x.md",
+            "img": "xxx"
+        },
+        {
+            "title": "WPF - DataContext 與 Binding 之間的概念",
+            "description": "打好 DataContext 概念基礎",
+            "link": "Articles/CSharp/WPF_DataContext概念釐清/WPF_DataContext概念釐清.md",
+            "img": "Articles/CSharp/WPF_DataContext概念釐清/images/04.png"
+        }
+    ],
+    "JavaScript": [{
+        "title": "Node.js module.export 與 exports 之間的差異",
+        "description": "module.export 與 exports 內部的運作機制解說",
+        "link": "x.md",
+        "img": "xxx"
+    }, {
+        "title": "JavaScript 函式多型實作",
+        "description": "JavaScript 也可以多型",
+        "link": "x.md",
+        "img": "xxx"
+    }],
+    "Python": [{
+        "title": "Python 函式基本教學",
+        "description": "Python 基本語法教學"
+    }],
+    "Linux": [{
+        "title": "Windows 使用 scp 指令傳送檔案至 Linux",
+        "description": "透過 scp 指令傳送檔案到 Linux, 反之亦然"
+    }, {
+        "title": "Linux 開機自動執行指令",
+        "description": "開機排程執行"
+    }],
+    "Others": [{
+        "title": "Git 版本管控",
+        "description": "git commit message 簽章功能"
+    }]
+}
