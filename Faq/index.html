@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../public/styles/home.css">
-    <title>Faq</title>
+    <title>FAQ</title>
+    <link rel="stylesheet" href="../public/styles/header.css">
+    <link rel="stylesheet" href="../public/styles/footer.css">
+    <link rel="stylesheet" href="../public/styles/home.css">
     <style>
         * {
             margin: 0;
@@ -15,6 +18,17 @@
         
         body {
             font-family: 'Lato', sans-serif;
+            background-color: #c5ded7;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            padding: 20px 30px;
+            background-color: white;
+            width: 80%;
+            min-height: 82vh;
+            margin: 0 auto;
         }
         
         .tablink {
@@ -85,73 +99,93 @@
     <a class="home" href="/BingFengHung.github.io/">
         <i class="material-icons">home</i>
     </a>
-    <div id="csharp" class="tabcontent">
-        <h1>C#</h1>
-        <p>C# / WPF 經驗談</p>
+
+    <header>
+        <div class="logo">
+            <a href="../">BingFeng</a>
+        </div>
+        <div class="topnav" id='myTopnav'>
+            <a href='javascript:void(0);' class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="../AboutMe/">關於我</a>
+            <a href="../Portfolio/">作品集</a>
+            <a href="../Faq/">FAQ</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div id="csharp" class="tabcontent">
+            <h1>C#</h1>
+            <p>C# / WPF 經驗談</p>
+        </div>
+
+        <div id="javascript" class="tabcontent">
+            <h1>JavaScript</h1>
+            <p>JavaScript 最被誤會的語言</p>
+        </div>
+
+        <div id="python" class="tabcontent">
+            <h1>Python</h1>
+            <p>Python 當代 AI 熱門語言首選</p>
+        </div>
+
+        <div id="linux" class="tabcontent">
+            <h1>Linux</h1>
+            <p>Linux 無所不在的 OS 系統</p>
+        </div>
+
+        <div id="others" class="tabcontent">
+            <h1>Others</h1>
+            <p>Others 雜談</p>
+        </div>
+
+        <button id='defaultOpen' class="tablink" onclick="openTab('csharp', this, 'red')">C#</button>
+        <button class="tablink" onclick="openTab('javascript', this, 'green')">JavaScript</button>
+        <button class="tablink" onclick="openTab('python', this, 'blue')">Python</button>
+        <button class="tablink" onclick="openTab('linux', this, 'orange')">Linux</button>
+        <button class="tablink" onclick="openTab('others', this, 'yellowgreen')">其他</button>
+
+        <!-- Content -->
+        <div id="csharp_content" class="content">
+            <ul>
+                <li><a href="#">C# - Tuple</a></li>
+                <li><a href="#">C# - GCHandle</a></li>
+                <li><a href="#">C# - Lazy 延遲物件實例化</a></li>
+                <li><a href="#">C# - sbyte 轉換為 string</a></li>
+                <li><a href="#">WPF - DataContext 與 Binding 之間的概念</a></li>
+            </ul>
+        </div>
+
+        <div id="javascript_content" class="content">
+            <ul>
+                <li><a href="#">Node.js module.exports 與 exports 之間的差異</a></li>
+                <li><a href="#">JavaScript 函式多型實作</a></li>
+            </ul>
+        </div>
+
+        <div id="python_content" class="content">
+            <ul>
+                <li><a href="#">Python 函式基本教學</a></li>
+            </ul>
+        </div>
+
+        <div id="linux_content" class="content">
+            <ul>
+                <li><a href="#">Windows 使用 SCP 傳送檔案至 Linux</a></li>
+                <li><a href="#">Linux 開機自動執行指令</a></li>
+            </ul>
+        </div>
+
+        <div id="others_content" class="content">
+            <ul>
+                <li><a href="#">Git 版本管控 - git commit message 簽章功能</a></li>
+            </ul>
+        </div>
     </div>
 
-    <div id="javascript" class="tabcontent">
-        <h1>JavaScript</h1>
-        <p>JavaScript 最被誤會的語言</p>
-    </div>
-
-    <div id="python" class="tabcontent">
-        <h1>Python</h1>
-        <p>Python 當代 AI 熱門語言首選</p>
-    </div>
-
-    <div id="linux" class="tabcontent">
-        <h1>Linux</h1>
-        <p>Linux 無所不在的 OS 系統</p>
-    </div>
-
-    <div id="others" class="tabcontent">
-        <h1>Others</h1>
-        <p>Others 雜談</p>
-    </div>
-
-    <button id='defaultOpen' class="tablink" onclick="openTab('csharp', this, 'red')">C#</button>
-    <button class="tablink" onclick="openTab('javascript', this, 'green')">JavaScript</button>
-    <button class="tablink" onclick="openTab('python', this, 'blue')">Python</button>
-    <button class="tablink" onclick="openTab('linux', this, 'orange')">Linux</button>
-    <button class="tablink" onclick="openTab('others', this, 'yellowgreen')">其他</button>
-
-    <!-- Content -->
-    <div id="csharp_content" class="content">
-        <ul>
-            <li><a href="#">C# - Tuple</a></li>
-            <li><a href="#">C# - GCHandle</a></li>
-            <li><a href="#">C# - Lazy 延遲物件實例化</a></li>
-            <li><a href="#">C# - sbyte 轉換為 string</a></li>
-            <li><a href="#">WPF - DataContext 與 Binding 之間的概念</a></li>
-        </ul>
-    </div>
-
-    <div id="javascript_content" class="content">
-        <ul>
-            <li><a href="#">Node.js module.exports 與 exports 之間的差異</a></li>
-            <li><a href="#">JavaScript 函式多型實作</a></li>
-        </ul>
-    </div>
-
-    <div id="python_content" class="content">
-        <ul>
-            <li><a href="#">Python 函式基本教學</a></li>
-        </ul>
-    </div>
-
-    <div id="linux_content" class="content">
-        <ul>
-            <li><a href="#">Windows 使用 SCP 傳送檔案至 Linux</a></li>
-            <li><a href="#">Linux 開機自動執行指令</a></li>
-        </ul>
-    </div>
-
-    <div id="others_content" class="content">
-        <ul>
-            <li><a href="#">Git 版本管控 - git commit message 簽章功能</a></li>
-        </ul>
-    </div>
+    <footer>
+        tHis
+    </footer>
 
     <script>
         function openTab(title, elmnt, color) {
