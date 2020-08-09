@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
-    <link rel="stylesheet" href="../../public/styles/header.css">
-    <link rel="stylesheet" href="../../public/styles/footer.css">
+    <link rel="stylesheet" href="../public/styles/header.css">
+    <link rel="stylesheet" href="../public/styles/footer.css">
     <style>
         * {
             box-sizing: border-box;
@@ -34,24 +34,22 @@
         </div>
         <div class="topnav" id='myTopnav'>
             <a href='javascript:void(0);' class="icon" onclick="myFunction()">&#9776;</a>
-            <a href="../../AboutMe/">關於我</a>
-            <a href="../../Portfolio/">作品集</a>
-            <a href="../../Faq/">FAQ</a>
+            <a href="../AboutMe/">關於我</a>
+            <a href="../Portfolio/">作品集</a>
+            <a href="../Faq/">FAQ</a>
         </div>
     </header>
 
-    <div id="container">
-
-    </div>
+    <div id="container"></div>
 
     <footer>
         tHis
     </footer>
 
-    <script defer src="../../public/scripts/webcomponents-loader.min.js"></script>
+    <script defer src="../public/scripts/webcomponents-loader.min.js"></script>
 
     <script type="module">
-        WebComponents.waitFor(() => { let el = document.createElement('script'); el.src = '../../public/scripts/zero-md.min.js'; document.head.appendChild(el); });
+        WebComponents.waitFor(() => { let el = document.createElement('script'); el.src = '../public/scripts/zero-md.min.js'; document.head.appendChild(el); });
     </script>
     <script>
         const links = localStorage.getItem('links');
@@ -59,7 +57,7 @@
         let div = document.getElementById('container');
 
         let mdElement = document.createElement('zero-md')
-        mdElement.src = '../../' + links;
+        mdElement.src = '../' + links;
 
         div.appendChild(mdElement);
         // alert(mdElement.attributes);
