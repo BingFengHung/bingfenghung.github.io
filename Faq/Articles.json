@@ -18,8 +18,8 @@
         }, {
             "title": "C# - sbyte 轉換為 string",
             "description": "sbyte 轉為 string",
-            "link": "x.md",
-            "img": "xxx"
+            "link": "Articles/CSharp/CSharp_sbyte陣列轉換為string/CSharp_sbyte陣列轉換為string.md",
+            "img": "Articles/CSharp/images/01.png"
         },
         {
             "title": "WPF - DataContext 與 Binding 之間的概念",
