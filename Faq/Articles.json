@@ -16,8 +16,8 @@
             "link": "Articles/CSharp/CSharp_在Winform中內嵌其他應用程式及相關操作/CSharp_在Winform中內嵌其他應用程式及相關操作.md",
             "img": "Articles/CSharp/CSharp_在Winform中內嵌其他應用程式及相關操作/images/01.png"
         }, {
-            "title": "C# - sbyte 轉換為 string",
-            "description": "sbyte 轉為 string",
+            "title": "C# sbyte 陣列轉換為 string",
+            "description": "sbyte 陣列轉為 string",
             "link": "Articles/CSharp/CSharp_sbyte陣列轉換為string/CSharp_sbyte陣列轉換為string.md",
             "img": "Articles/CSharp/CSharp_sbyte陣列轉換為string/images/01.png"
         },
