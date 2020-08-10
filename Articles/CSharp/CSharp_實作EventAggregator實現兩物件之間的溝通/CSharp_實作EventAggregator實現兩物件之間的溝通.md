@@ -165,4 +165,5 @@ static void Main(string[] args) {
 圖9、類別註冊與通知
 
 先將EventAggregator 的類別實例化，然後透過此物件進行註冊的動作，最後在進行 Publish(指定型別)，結果如下圖10：
+
 ![](https://BingFengHung.github.io/Articles/CSharp/CSharp_實作EventAggregator實現兩物件之間的溝通/images/02.png)
