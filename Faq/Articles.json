@@ -1,15 +1,15 @@
 {
     "CSharp": [{
-            "title": "C# Tuple 型別",
-            "description": "C# Tuple 類型介紹",
-            "link": "xxx.md",
-            "img": "xxx"
+            "title": "C# 實作 EventAggregator 實現兩物件之間的溝通",
+            "description": "兩物件之間資料傳遞溝通",
+            "link": "Articles/CSharp/CSharp_實作EventAggregator實現兩物件之間的溝通/CSharp_實作EventAggregator實現兩物件之間的溝通.md",
+            "img": "Articles/CSharp/CSharp_實作EventAggregator實現兩物件之間的溝通/images/01.png"
         },
         {
-            "title": "C# GCHandle",
-            "description": "記憶體垃圾回搜機制說明",
-            "link": "xxx.md",
-            "img": "xxx"
+            "title": "C# 在多執行緒下確保只有一個物件實例化",
+            "description": "多執行下確保只有一個物件實例化",
+            "link": "Articles/CSharp/CSharp_在多執行緒下確保只有一個物件實例化/CSharp_在多執行緒下確保只有一個物件實例化.md",
+            "img": "Articles/CSharp/CSharp_在多執行緒下確保只有一個物件實例化/images/01.png"
         }, {
             "title": "C# 在 Winform 中內嵌其他應用程式及相關操作",
             "description": "內嵌程式到 Winform 中",
