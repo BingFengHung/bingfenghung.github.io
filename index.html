@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/styles/header.css">
     <title>BingFeng</title>
-    <link rel="stylesheet" href="/public/images/favico.ico">
+    <link rel="shortcut icon" href="public/images/favico.ico" type="image/ico">
     <style>
         * {
             box-sizing: border-box;
@@ -152,7 +152,7 @@
         <div class="topnav" id='myTopnav'>
             <a href='javascript:void(0);' class="icon" onclick="myFunction()">&#9776;</a>
             <a href="AboutMe/">關於我</a>
-            <a href="Portfolio/">作品集</a>
+            <a href="Portfolio/">專案項目</a>
             <a href="Faq/">FAQ</a>
         </div>
     </header>
@@ -171,6 +171,9 @@
 
     <div class="article">
         <h2>近期文章</h2>
+
+        <div id="article_block"></div>
+
         <div class="area_row">
             <div class="card">
                 <img src="" alt="" width="100%">
@@ -228,6 +231,81 @@
     </footer>
 
     <script>
+        fetchArticle();
+
+        function fetchArticle() {
+            let articleBlock = document.getElementById('article_block');
+
+            fetch('./Faq/Articles.json').then(res => res.json())
+                .then(data => {
+                    let csharp = data.CSharp;
+                    let javascript = data.JavaScript;
+                    let python = data.Python;
+                    let linux = data.Linux;
+                    let others = data.Others;
+
+                    // 計算最高比例
+                    let total = Object.keys(data).reduce((prev, current) => {
+                        return prev + data[current].length;
+                    }, 0);
+
+                    let counts = Object.keys(data).map(key => {
+                        return {
+                            [key]: data[key].length
+                        }
+                    });
+
+                    let csharpLength = csharp.length;
+                    let javascriptLength = javascript.length;
+                    let pythonLength = python.length;
+                    let linuxLength = python.length;
+                    let othersLength = others.length;
+
+
+                    // 至少要有一篇文章並且多出來的要在分配給項目比較多的 (總共要出 6 篇)
+                    createElement(csharp[0], articleBlock);
+                    createElement(javascript[0], articleBlock);
+                    createElement(python[0], articleBlock);
+                    createElement(linux[0], articleBlock);
+                    createElement(others[0], articleBlock);
+
+                    // get max value item
+                    let maxItem = [...counts].reduce((max, item) => {
+                        // alert(item)
+                        //alert(Object.keys(item));
+                        let key = Object.keys(item)[0];
+                        return item[key] > max ? key : max;
+                    }, "");
+                });
+
+            function createElement(element, parentElement) {
+                let el = createCardTemplate(element.title, element.description, element.img, element.link);
+
+                parentElement.appendChild(el);
+            }
+        }
+
+        function setValue(link) {
+            localStorage.setItem('links', link);
+            return true;
+        }
+
+        function createCardTemplate(title, description, imgSrc, link) {
+            let divElement = document.createElement('div');
+            divElement.className = 'card';
+
+            divElement.innerHTMl = `
+               <a href='../Articles/data.html' onclick='setValue("${link}");'>
+                  <img src=../${imgSrc}>
+                  <div class='card-container'>
+                     <h4><b>${title}</b></h4>
+                     <p>${description}</p>
+                  </div>
+               </a>
+            `;
+            return divElement;
+        }
+
         function openNav() {
             document.getElementById('mySidenav').style.width = '250px';
 
