@@ -11,15 +11,15 @@
             "link": "xxx.md",
             "img": "xxx"
         }, {
-            "title": "C# Lazy 延遲物件實例化",
-            "description": "物件延遲建立",
-            "link": "xxx.md",
-            "img": "xxx"
+            "title": "C# 在 Winform 中內嵌其他應用程式及相關操作",
+            "description": "內嵌程式到 Winform 中",
+            "link": "Articles/CSharp/CSharp_在Winform中內嵌其他應用程式及相關操作/CSharp_在Winform中內嵌其他應用程式及相關操作.md",
+            "img": "Articles/CSharp/CSharp_在Winform中內嵌其他應用程式及相關操作/images/01.png"
         }, {
             "title": "C# - sbyte 轉換為 string",
             "description": "sbyte 轉為 string",
             "link": "Articles/CSharp/CSharp_sbyte陣列轉換為string/CSharp_sbyte陣列轉換為string.md",
-            "img": "Articles/CSharp/images/01.png"
+            "img": "Articles/CSharp/CSharp_sbyte陣列轉換為string/images/01.png"
         },
         {
             "title": "WPF - DataContext 與 Binding 之間的概念",
