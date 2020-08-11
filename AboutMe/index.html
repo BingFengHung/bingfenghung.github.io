@@ -49,11 +49,11 @@
         
         .personal_info {
             display: flex;
-            width: 75%;
+            width: 100%;
         }
         
         .pic {
-            width: 35%;
+            margin-right: 5%;
         }
         
         .avatar {
@@ -64,17 +64,41 @@
         .info {
             display: flex;
             align-items: center;
-            width: 65%;
         }
         
         .info li {
             list-style-type: none;
-            margin: 20px 0;
+            margin: 10px 0;
             font-size: 1.4rem;
         }
         
         .motto li {
-            font-size: 1rem;
+            font-size: 1.4rem;
+            margin: 20px 0;
+        }
+        
+        @media screen and (max-width: 1024px) {
+            .info li,
+            .motto li {
+                font-size: 18px;
+            }
+            .avatar {
+                width: 160px;
+                clip-path: circle(40% at center);
+            }
+        }
+        
+        @media screen and (max-width: 880px) {
+            .avatar {
+                width: 140px;
+                clip-path: circle(40% at center);
+            }
+        }
+        
+        @media screen and (max-width: 750px) {
+            .motto {
+                display: none;
+            }
         }
     </style>
 </head>
