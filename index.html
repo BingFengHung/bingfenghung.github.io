@@ -8,7 +8,7 @@
     <title>BingFeng</title>
     <link rel="shortcut icon" href="public/images/favico.ico" type="image/ico">
     <style>
-            * {
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -191,6 +191,7 @@
             .card {
                 width: 100%;
             }
+        }
     </style>
 </head>
 
@@ -200,7 +201,7 @@
             <a href="./">BingFeng</a>
         </div>
         <div class="topnav" id='myTopnav'>
-            <a href='javascript:void(0);' class="icon" onclick="myFunction()">&#9776;</a>
+            <a href='javascript:void(0);' id='menu' class="icon" onclick="myFunction()">&#9776;</a>
             <a href="AboutMe/">關於我</a>
             <a href="Portfolio/">專案項目</a>
             <a href="Faq/">FAQ</a>
@@ -224,56 +225,6 @@
 
         <div id="article_block"></div>
 
-        <!-- <div class="area_row">
-            <div class="card">
-                <img src="" alt="" width="100%">
-                <div class="article_area">
-                    <h4><b>Python</b></h4>
-                    <p>Python 函式基本教學</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="" alt="">
-                <div class="article_area">
-                    <h4><b>C#</b></h4>
-                    <p>sbyte 轉換為 string</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="" alt="">
-                <div class="article_area">
-                    <h4><b>JavaScript</b></h4>
-                    <p>Node.js module.exports 與 exports 之間的差異</p>
-                </div>
-            </div>
-        </div>
-        <div class="area_row">
-            <div class="card">
-                <img src="" alt="">
-                <div class="article_area">
-                    <h4><b>Linux</b></h4>
-                    <p>Linux 開機自動執行指令</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="" alt="">
-                <div class="article_area">
-                    <h4><b>Linux</b></h4>
-                    <p>Windows 使用 SCP 傳送檔案至 Linux </p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="" alt="">
-                <div class="article_area">
-                    <h4><b>其他</b></h4>
-                    <p>Git 版本管控 - git commit message 簽章功能</p>
-                </div>
-            </div>
-        </div> -->
     </div>
 
     <footer class="footer">
@@ -282,6 +233,8 @@
 
     <script>
         (function() {
+            let menuEl = document.querySelector('#menu');
+            menuEl.addEventListener('click', myFunction);
             fetchArticle();
 
             function fetchArticle() {
