@@ -47,7 +47,7 @@
         "title": "在 Windows 下使用 SCP 指令傳送檔案到 Linux",
         "description": "Windows scp 指令傳送檔案到 Linux, 以及 Linux 傳送檔案至 Windows",
         "link": "Articles/Linux/在Windows下使用SCP傳送檔案到Linux/在Windows下使用SCP傳送檔案到Linux.md",
-        "img": "Articles/Linux/在Windows下使用SCP傳送檔案到Linux/02.png"
+        "img": "Articles/Linux/在Windows下使用SCP傳送檔案到Linux/images/02.png"
     }, {
         "title": "Linux 開機自動執行指令",
         "description": "開機排程執行"
