@@ -31,8 +31,8 @@
     "JavaScript": [{
         "title": "Node.js module.export 與 exports 之間的差異",
         "description": "module.export 與 exports 內部的運作機制解說",
-        "link": "x.md",
-        "img": "xxx"
+        "link": "Articles/JavaScript/Node.jsModule.exports與exports之間的差異/Node.jsModule.exports與exports之間的差異.md",
+        "img": "Articles/JavaScript/Node.jsModule.exports與exports之間的差異/images/02.png"
     }, {
         "title": "JavaScript 函式多型實作",
         "description": "JavaScript 也可以多型",

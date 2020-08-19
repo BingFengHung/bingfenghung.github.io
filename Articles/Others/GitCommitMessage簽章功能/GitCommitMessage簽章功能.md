@@ -1,6 +1,5 @@
 # Git Commit Message 簽章功能
 
-## 前言
 每次在撰寫 Git Commit 訊息時，若沒有統一的撰寫規範，在未來要查找相關紀錄時，會花費一些時間；本篇主要介紹如何透過 git 指令與指定 Git Commit Message Template 的方法，幫助我們每次再撰寫 git commit message 時，有一個統一的編輯規範。
 
 首先，可以看到下圖 1 的部分，git message 的部分是空白的，導致每次編寫 commit message 時，都要在撰寫一次同樣的編輯規範，為了增加撰寫 git 的速度，下面將介紹如何建立 git commit message template。
