@@ -41,7 +41,9 @@
     }],
     "Python": [{
         "title": "Python 函式基本教學",
-        "description": "Python 基本語法教學"
+        "description": "Python 函式基本教學",
+        "link": "Articles/Python/Python函式基本教學/Python函式基本教學.md",
+        "img": "Articles/Python/Python函式基本教學/images/01.png"
     }],
     "Linux": [{
         "title": "在 Windows 下使用 SCP 指令傳送檔案到 Linux",

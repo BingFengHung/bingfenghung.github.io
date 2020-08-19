@@ -8,6 +8,7 @@
 > scp windows_file_path linux_host:/linux_path/
 
 實際操作如下圖所示：
+
 ![](https://BingFengHung.github.io/Articles/Linux/在Windows下使用SCP傳送檔案到Linux/images/01.png)
 
 上面是傳送一個檔案的方式，可以在 scp 指令加上一個 -r 的參數，就可以傳送資料夾內所有的檔案。
