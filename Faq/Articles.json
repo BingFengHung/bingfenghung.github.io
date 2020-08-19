@@ -58,6 +58,8 @@
     }],
     "Others": [{
         "title": "Git 版本管控",
-        "description": "git commit message 簽章功能"
+        "description": "git commit message 簽章功能",
+        "link": "Articles/Others/GitCommitMessage簽章功能/GitCommitMessage簽章功能.md",
+        "img": "Articles/Others/GitCommitMessage簽章功能/images/01.png"
     }]
 }
