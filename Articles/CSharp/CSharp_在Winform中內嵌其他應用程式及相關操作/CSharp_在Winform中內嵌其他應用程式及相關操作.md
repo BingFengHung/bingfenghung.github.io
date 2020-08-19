@@ -97,4 +97,4 @@ private void Form1_FormClosing(object sender, FormClosingEventArgs e) {
     UnhookWinEvent(hook);
 }
 ```
-圖 9、取消委派註冊k
+圖 9、取消委派註冊

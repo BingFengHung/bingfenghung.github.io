@@ -52,7 +52,9 @@
         "img": "Articles/Linux/在Windows下使用SCP傳送檔案到Linux/images/02.png"
     }, {
         "title": "Linux 開機自動執行指令",
-        "description": "開機排程執行"
+        "description": "開機排程執行",
+        "link": "Articles/Linux/Linux開機自動執行指令/Linux開機自動執行指令.md",
+        "img": "Articles/Linux/Linux開機自動執行指令/images/01.png"
     }],
     "Others": [{
         "title": "Git 版本管控",
