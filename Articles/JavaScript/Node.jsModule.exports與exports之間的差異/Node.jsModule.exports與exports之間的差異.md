@@ -31,4 +31,6 @@ console.log('pause');
 ```
 
 引入後結果如下圖 1 所示：
-![](https://BingFengHung.github.io/Articles/JavaScript/Node.jsModule.exports與exports之間的差異/images/05.png)
+![](https://BingFengHung.github.io/Articles/JavaScript/Node.jsModule.exports與exports之間的差異/images/01.png)
+
+可發現由 exports.tag 輸出的函式是 undefined。這是因為其實，module.exports 才是 module 模組的真正介面，而 exports 可以理解他為一個副本，雖然修改 exports 物件的時候也會修改 module.exports 物件，但是駔後返回給使用者是 module.exports 物件而非 exports 物件。因此，當 module.exports 物件透過賦值方式進行設定後，已經與 exports 物件指向的變數不同了，此時無論 exports 物件如何修改，都已經與 module.exports 無關了。
