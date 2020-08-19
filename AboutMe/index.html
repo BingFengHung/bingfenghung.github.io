@@ -26,7 +26,7 @@
         }
         
         .container {
-            padding: 20px 30px;
+            padding: 20px 30px 50px;
             background-color: white;
             width: 80%;
             margin: 0 auto;
@@ -90,6 +90,17 @@
         }
         
         @media screen and (max-width: 750px) {
+            .motto {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 530px) {
+            .info ul {
+                margin: 0px ;
+                padding: 0px;
+            }
+        
             .motto {
                 display: none;
             }
@@ -199,7 +210,7 @@
                     </ul>
                 </div>
                 <div class="skills">
-                    <h3>Backend</h3>
+                    <h4>Backend</h4>
                     <ul>
                         <li>Node.js Express</li>
                         <li>WebScoket 串接 C# Server</li>
