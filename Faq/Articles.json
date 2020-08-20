@@ -36,8 +36,8 @@
     }, {
         "title": "JavaScript 函式多型實作",
         "description": "JavaScript 也可以多型",
-        "link": "x.md",
-        "img": "xxx"
+        "link": "Articles/JavaScript/JavaScript函式多型實作/JavaScript函式多型實作.md",
+        "img": "Articles/JavaScript/JavaScript函式多型實作/images/05.png"
     }],
     "Python": [{
         "title": "Python 函式基本教學",
