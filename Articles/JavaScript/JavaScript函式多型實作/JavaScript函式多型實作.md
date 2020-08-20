@@ -45,5 +45,6 @@
 說明圖如下圖 5 所示：
 ![](https://BingFengHung.github.io/Articles/JavaScript/JavaScript函式多型實作/images/05.png)
 
+圖 5、多型 Scope Chain
 
 根據上面的概念，每次我們都會從最後一次儲存的函式開始往下面去找 (從有n 個參數的函式開始找到，沒有參數為止)，因此，我們後面在呼叫不同的參數就能夠對應到不同的函式了。
