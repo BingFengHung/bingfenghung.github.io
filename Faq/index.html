@@ -117,9 +117,16 @@
                 align-items: center;
                 flex-wrap: nowrap;
             }
-
             .card {
                 width: 80%;
+            }
+        }
+        
+        @media only screen and (max-width: 767px) {
+            .tablink {
+                display: block;
+                float: none;
+                width: 100%;
             }
         }
     </style>
@@ -143,7 +150,6 @@
     </header>
 
     <div class="container">
-
         <div id="csharp" class="tabcontent">
             <h1>C#</h1>
             <p>C# / WPF 經驗談</p>
@@ -192,7 +198,7 @@
     </footer>
 
     <script>
-		function myFunction() {
+        function myFunction() {
             let x = document.getElementById('myTopnav');
 
             if (x.className === 'topnav') {

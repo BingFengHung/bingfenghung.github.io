@@ -13,22 +13,6 @@
     <link rel="stylesheet" href="../public/styles/starRating.css">
 
     <style>
-        /* @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
-        * {
-            font-family: 'Noto Sans TC', sans-serif;
-            box-sizing: border-box;
-        }
-        
-        ul {
-            margin: 0;
-        } */
-        
-        body {
-            background-color: #c5ded7;
-            padding: 0;
-            margin: 0;
-        }
-        
         .container {
             padding: 20px 30px 50px;
             background-color: white;
@@ -80,17 +64,17 @@
             font-size: 1.4rem;
             margin: 20px 0;
         }
-
+        
         .skills {
             width: 50%;
         }
+        
         .skills li {
             display: flex;
             justify-content: flex-start;
             align-items: center;
         }
-
-
+        
         .skills li p {
             margin: 0 10px;
         }
@@ -118,29 +102,29 @@
                 display: none;
             }
         }
-
+        
         @media screen and (max-width: 530px) {
             .info ul {
-                margin: 0px ;
+                margin: 0px;
                 padding: 0px;
             }
-        
             .motto {
                 display: none;
             }
         }
-
+        
         @media screen and (max-width: 767px) {
-
+            .skill_container {
+                display: block;
+            }
         }
-
-         /* Mobile */
+        /* Mobile */
+        
         @media screen and (max-width: 480px) {
             .container {
-                 padding: 10px 10px 50px;
-                 width: 90%;
+                padding: 10px 10px 50px;
+                width: 90%;
             }
-
             .personal_info {
                 display: flex;
                 width: 100%;
@@ -150,12 +134,10 @@
                 width: 120px;
                 clip-path: circle(40% at center);
             }
-
             .info li {
                 font-size: 14px;
             }
         }
-
     </style>
 </head>
 
@@ -249,137 +231,137 @@
 
         <div class="skill_container">
             <!-- <div class="row"> -->
-                <div class="skills">
-                    <h4>Frontend</h4>
-                    <ul>
-                        <li>
-                            <p> HTML/CSS/JS ES6 </p>
-                            <div class='rate' data-rate='4'></div>
-                        </li>
-                        <li>
-                            <p> Vue.js/Vue Cli 3 </p>
-                        <div class='rate' data-rate='3'></div>
-                        </li>
-                        <li>
-                            <p>BootstrapVue </p>
+            <div class="skills">
+                <h4>Frontend</h4>
+                <ul>
+                    <li>
+                        <p> HTML/CSS/JS ES6 </p>
                         <div class='rate' data-rate='4'></div>
-                        </li>
-                        <li>
-                         <p>Axios</p>  
+                    </li>
+                    <li>
+                        <p> Vue.js/Vue Cli 3 </p>
+                        <div class='rate' data-rate='3'></div>
+                    </li>
+                    <li>
+                        <p>BootstrapVue </p>
                         <div class='rate' data-rate='4'></div>
-                        </li>
-                        <li>
-                            <p> jQuery </p>
+                    </li>
+                    <li>
+                        <p>Axios</p>
+                        <div class='rate' data-rate='4'></div>
+                    </li>
+                    <li>
+                        <p> jQuery </p>
                         <div class='rate' data-rate='3'></div>
-                        </li>
-                        <li>
-                            <p> Webpack </p>
+                    </li>
+                    <li>
+                        <p> Webpack </p>
                         <div class='rate' data-rate='3'></div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="skills">
-                    <h4>Backend</h4>
-                    <ul>
-                        <li>
-                            <p>
+                    </li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h4>Backend</h4>
+                <ul>
+                    <li>
+                        <p>
 
                             Node.js Express
-                            </p>
+                        </p>
                         <div class='rate' data-rate='4'></div>
-                        </li>
-                        <li>
-                            <p>
+                    </li>
+                    <li>
+                        <p>
 
                             WebScoket 串接 C# Server
-                            </p>
+                        </p>
                         <div class='rate' data-rate='4'></div>
-                            
-                        </li>
-                    </ul>
-                </div>
-                <div class="skills">
-                    <h4>SQL</h4>
-                    <ul>
-                        <li>
-                            <p>MySQL</p> 
-                            <div class='rate' data-rate='5'></div>
-                        </li>
-                        <li>
-                            <p>PostgreSQL</p> 
-                            <div class='rate' data-rate='3'></div>
-                        </li>
-                        <li> 
-                            <p>MongoDB</p>  
-                            <div class='rate' data-rate='4'></div>
-                        </li>
-                    </ul>
-                </div>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h4>SQL</h4>
+                <ul>
+                    <li>
+                        <p>MySQL</p>
+                        <div class='rate' data-rate='5'></div>
+                    </li>
+                    <li>
+                        <p>PostgreSQL</p>
+                        <div class='rate' data-rate='3'></div>
+                    </li>
+                    <li>
+                        <p>MongoDB</p>
+                        <div class='rate' data-rate='4'></div>
+                    </li>
+                </ul>
+            </div>
             <!-- </div> -->
 
             <!-- <div class="row"> -->
-                <div class="skills">
-                    <h4>Desktop App</h4>
-                    <ul>
-                        <li>
-                            <p>C# WPF </p>
+            <div class="skills">
+                <h4>Desktop App</h4>
+                <ul>
+                    <li>
+                        <p>C# WPF </p>
                         <div class='rate' data-rate='5'></div>
-                        </li>
-                        <li>
-                            <p>Caliburn.Micro</p> 
-                            <div class='rate' data-rate='5'></div>
-                        </li>
-                        <li>
-                            <p> AutoFac </p> 
-                            <div class='rate' data-rate='4'></div>
-                        </li>
-                        <li>
-                            <p> Unit Test (NUnit/NSubstitute) </p>
+                    </li>
+                    <li>
+                        <p>Caliburn.Micro</p>
+                        <div class='rate' data-rate='5'></div>
+                    </li>
+                    <li>
+                        <p> AutoFac </p>
                         <div class='rate' data-rate='4'></div>
-                        </li>
-                    </ul>
-                </div>
+                    </li>
+                    <li>
+                        <p> Unit Test (NUnit/NSubstitute) </p>
+                        <div class='rate' data-rate='4'></div>
+                    </li>
+                </ul>
+            </div>
 
-                <div class="skills">
-                    <h4>Artificial Intelligence</h4>
-                    <ul>
-                        <li>
-                            <p>機器學習</p>
+            <div class="skills">
+                <h4>Artificial Intelligence</h4>
+                <ul>
+                    <li>
+                        <p>機器學習</p>
                         <div class='rate' data-rate='4'></div>
 
-                        </li>
-                        <li>
-                            <p>深度學習</p>
+                    </li>
+                    <li>
+                        <p>深度學習</p>
                         <div class='rate' data-rate='3'></div>
-                        </li>
-                    </ul>
-                </div>
+                    </li>
+                </ul>
+            </div>
 
-                <div class="skills">
-                    <h4>其他</h4>
-                    <ul>
-                        <li>
-                            <p>Linux</p> 
-                            <div class='rate' data-rate='3'></div>
-                        </li>
-                        <li>
-                            <p>Git</p> 
-                            <div class='rate' data-rate='4'></div>
-                        </li>
-                        <li>
-                            <p>WebSocket</p>
-                            <div class='rate' data-rate='3'></div>
-                        </li>
-                        <li>
-                            <p>MQTT</p> 
-                            <div class='rate' data-rate='2'></div>
-                        </li>
-                        <li>
-                            <p>Vim</p> 
-                            <div class='rate' data-rate='3'></div>
-                        </li>
-                    </ul>
-                </div>
+            <div class="skills">
+                <h4>其他</h4>
+                <ul>
+                    <li>
+                        <p>Linux</p>
+                        <div class='rate' data-rate='3'></div>
+                    </li>
+                    <li>
+                        <p>Git</p>
+                        <div class='rate' data-rate='4'></div>
+                    </li>
+                    <li>
+                        <p>WebSocket</p>
+                        <div class='rate' data-rate='3'></div>
+                    </li>
+                    <li>
+                        <p>MQTT</p>
+                        <div class='rate' data-rate='2'></div>
+                    </li>
+                    <li>
+                        <p>Vim</p>
+                        <div class='rate' data-rate='3'></div>
+                    </li>
+                </ul>
+            </div>
             <!-- </div> -->
         </div>
 
