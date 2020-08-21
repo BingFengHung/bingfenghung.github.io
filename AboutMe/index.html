@@ -19,6 +19,47 @@
             width: 80%;
             margin: 0 auto;
         }
+
+        .personal_info {
+            display: flex;
+            width: 100%;
+        }
+        .personal_info .pic {
+            margin-right: 3%;
+        }
+        
+        .personal_info .pic .avatar {
+            width: 200px;
+            clip-path: circle(40% at center);
+        }
+        
+        .personal_info .info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .personal_info .info  ul {
+            margin: 0 40px;
+        }
+        
+        .personal_info .info li {
+            list-style-type: none;
+            margin: 16px 0;
+            font-size: 1.6rem;
+        }
+
+        .works {
+            margin: 20px 0;
+        }
+
+        .works ul li {
+            margin: 0 30px;
+        }
+        
+        .personal_info .motto li {
+            font-size: 1.4rem;
+            margin: 15px 0;
+        }
         
         .skill_container {
             display: flex;
@@ -31,42 +72,8 @@
             justify-content: space-around;
         }
         
-        .personal_info {
-            display: flex;
-            width: 100%;
-        }
-        
-        .pic {
-            margin-right: 5%;
-        }
-        
-        .avatar {
-            width: 200px;
-            clip-path: circle(40% at center);
-        }
-        
-        .info {
-            display: flex;
-            align-items: center;
-        }
-        
-        .info ul {
-            margin: 0 20px;
-        }
-        
-        .info li {
-            list-style-type: none;
-            margin: 10px 0;
-            font-size: 1.4rem;
-        }
-        
-        .motto li {
-            font-size: 1.4rem;
-            margin: 20px 0;
-        }
-        
         .skills {
-            width: 50%;
+            width: 32%;
         }
         
         .skills li {
@@ -77,9 +84,99 @@
         
         .skills li p {
             margin: 0 10px;
+            width: 50%;
+        }
+
+        .special_event ul li{
+             margin: 0 30px;
+        }
+
+        .plan ul li {
+            margin: 0 30px;
+        }
+
+        /* Big Tablet to 1200px (width smaller than 1140px row */ 
+        @media only screen and (max-width: 1200px) {
+            .personal_info .info ul {
+                margin: 0 30px;
+            }
+            .personal_info .info li {
+                font-size: 1.2rem;
+            }
+
+            .skills {
+                width: 50%;
+            }
+        } 
+        
+        /* Small Tablet to Big Tablet from 768 to 1023px */ 
+        @media only screen and (max-width: 1023px) {
+            .personal_info .pic .avatar {
+                width: 180px;
+                clip-path: circle(40% at center);
+            }
+        }
+        
+        @media screen and (max-width: 979px) {
+            .personal_info .pic .avatar {
+                width: 140px;
+                clip-path: circle(40% at center);
+            }
+
+            .personal_info .info ul {
+                margin: 0 10px;
+            }
+
+             .personal_info .info li {
+                font-size: 1.1rem;
+            }
+
+        }
+        
+        /* Small Phones to small Tablet 481-767px(Ipad) */ 
+        @media only screen and (max-width: 767px) {
+            .motto {
+                display: none;
+            }
+
+             .skills {
+                width: 100%;
+                margin:  0 auto;
+            }
+
+            .skills li div {
+            margin: 0 30px;
+         }
+        } 
+
+        /* Small Phones 0 to 480px(Iphone) */ 
+        @media only screen and (max-width: 480px) {
+            .personal_info {
+                display: block;
+            }
+
+            .skills li div {
+                margin: 0 20px;
+            }
+
+            .skills li div {
+                font-size: 18px;
+            }
+        }
+
+        /* @media only screen and (max-width: 1200px) {
+            .info ul{
+                margin: 0 20px;
+            }
+            .skills {
+                width: 33%;
+            }
         }
         
         @media screen and (max-width: 1024px) {
+            .skills {
+                width: 50%;
+            }
             .info li,
             .motto li {
                 font-size: 18px;
@@ -101,9 +198,18 @@
             .motto {
                 display: none;
             }
+            
+            .skills {
+                width: 100%;
+                margin:  0 auto;
+            }
+
+            .skills li div {
+            margin: 0 30px;
+         }
         }
         
-        @media screen and (max-width: 530px) {
+        /* @media screen and (max-width: 530px) {
             .info ul {
                 margin: 0px;
                 padding: 0px;
@@ -111,15 +217,15 @@
             .motto {
                 display: none;
             }
-        }
-        
+        } */
+        /*
         @media screen and (max-width: 767px) {
             .skill_container {
                 display: block;
             }
         }
         /* Mobile */
-        
+        /*
         @media screen and (max-width: 480px) {
             .container {
                 padding: 10px 10px 50px;
@@ -137,7 +243,7 @@
             .info li {
                 font-size: 14px;
             }
-        }
+        } */
     </style>
 </head>
 
@@ -150,6 +256,7 @@
         <div class="logo">
             <a href="../">BingFeng</a>
         </div>
+
         <div class="topnav" id='myTopnav'>
             <a href='javascript:void(0);' class="icon" onclick="myFunction()">&#9776;</a>
             <a href="../AboutMe/">關於我</a>
@@ -157,10 +264,6 @@
             <a href="../Faq/">FAQ</a>
         </div>
     </header>
-
-    <!-- <header>
-        <h2>Header</h2>
-    </header> -->
 
     <div class="container">
         <div class="personal_info">
@@ -200,7 +303,8 @@
             碩士畢業後的第一份工作，是在協鴻工業股份有限公司擔任軟體工程師，主要負責 MES 功能開發、機台加值軟體開發以及 iFactory 機台資訊整合網頁。 從中學習到了與美編人員的溝通，跨單位的合作整合以及專案管制的進度控制，例如 MES，需要經常與資管組以及加工課的人員經常開會，並針對加工課的需求進行開發與設計，並與資管組共同討論資料的串接問題，例如兩個不同的資料庫之間要如何溝通與儲存等問題，也因為有這個經驗，在後續的跨單位合作往往都能很順利的合作。 在公司的這段期間，除了完成公司上面的事物之外，也會在下班閒暇之餘不斷的精進自己的實力，也因此得到公司外訓的機會，有機會接觸到人工智慧的領域，並且也於外訓上課的時候，發表了
             AI 斷刀檢知的功能，有幸也得到了第二名的佳績，這當然不是我一個人的功勞，是專案成員的共同努力，當然在過程中會有不少的溝通與討論，但在公司專案管理的經驗支援之下，讓專案不只可以如期的完成，也得到該單位的肯定，榮獲第二名的殊榮。
         </p>
-        <div>
+
+        <div class="works">
             <h4>控制器加值軟體 HMI 開發</h4>
             <ul>
                 <li>MES 系統開發</li>
@@ -229,6 +333,7 @@
         </div>
 
 
+        <h3>技能</h3>
         <div class="skill_container">
             <!-- <div class="row"> -->
             <div class="skills">
@@ -366,32 +471,29 @@
         </div>
 
         <h3>特殊事蹟</h3>
+        <div class="special_event">
         <ul>
             <li>2019 年-協鴻工業股份有限公司-上半年度優良員工</li>
             <li>台灣人工智慧學校台中二期技術經理人班-AI斷刀檢知 （第二名）</li>
         </ul>
 
+        </div>
+
         <h3>未來規劃</h3>
-        <ul>
-            <li>IoT</li>
-            <li>Docket/K8s</li>
-            <li>MicroServices 架構</li>
-        </ul>
+        <div class="plan"> 
+            <ul> 
+                <li>IoT</li> 
+                <li>Docket/K8s</li> 
+                <li>MicroServices 架構</li> 
+            </ul>
+        </div>
 
     </div>
     <footer>
     </footer>
     <script src="../public/scripts/starRating.js"></script>
+    <script src="../public/scripts/header.js"></script>
     <script>
-        function myFunction() {
-            let x = document.getElementById('myTopnav');
-
-            if (x.className === 'topnav') {
-                x.className += ' responsive';
-            } else {
-                x.className = 'topnav';
-            }
-        }
     </script>
 </body>
 
