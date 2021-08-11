@@ -1,0 +1,31 @@
+ .rate {
+      font-size: 24px;
+ }
+ .rate0::after { 
+     content: '☆☆☆☆☆'; 
+     color: #FFF900;
+}
+
+.rate1::after {
+    content: '★☆☆☆☆';
+     color: #FFF900;
+} 
+
+.rate2::after { 
+    content: '★★☆☆☆'; 
+     color: #FF8800;
+}
+.rate3::after {
+     content: '★★★☆☆'; 
+     color: #FF8800;
+} 
+
+.rate4::after { 
+    content: '★★★★☆'; 
+     color: #FF8800;
+} 
+
+.rate5::after { 
+    content: '★★★★★'; 
+     color: #FF8800;
+}

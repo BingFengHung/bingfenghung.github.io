@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+a.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    margin: 10px;
+    padding: 10px;
+    z-index: 1;
+    border: 2px solid #ccc;
+    outline: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #ccc;
+    color: white;
+    transition: .3s;
+}
+
+a.home:hover {
+    background-color: #eee;
+    animation: jump .6s linear infinite;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 5px;
+    }
+    35% {
+        bottom: 10px;
+    }
+    70% {
+        bottom: 15px;
+    }
+    100% {
+        bottom: 20px;
+    }
+}
