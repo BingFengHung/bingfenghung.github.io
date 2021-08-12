@@ -1,10 +1,9 @@
 import './App.css';
-import background from './assets/OGA1IP0.jpg'
 import Home from './views/home/home';
 import Faq from './views/faq/Faq';
 import AboutMe from './views/about_me/AboutMe';
 import Portfolio from './views/portfolio/Portfolio';
-import Header from './components/header/header';
+import Header from './components/header/Header';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
 
 function App() {
@@ -17,17 +16,14 @@ function App() {
         </Route>
         <Route path="/AboutMe">
           <AboutMe/>
-         </Route>
+        </Route>
         <Route path="/Portfolio">
           <Portfolio/>
-         </Route>
+        </Route>
         <Route path="/Faq">
           <Faq/>
-         </Route>
+        </Route>
       </Switch>
-      <div id="main">
-        <img src={background} alt="playground"/>
-      </div>
     </Router>
   );
 }

@@ -1,8 +1,13 @@
 import './home.css'
+import background from '../../assets/OGA1IP0.jpg'
 
 function Home() {
 	return(
-		<div>Home</div>
+		<div>
+      <div id="main">
+        <img src={background} alt="playground"/>
+      </div>
+		</div>
 	)
 }
 
