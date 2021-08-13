@@ -1,4 +1,4 @@
-import './ArticleCard.css';
+import style from './ArticleCard.module.css';
 import { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 
@@ -37,9 +37,9 @@ function ArticleCard() {
 	}, [])
 
 	return (
-		<div className="article">
+		<div className={style.article}>
 			<h2>近期文章</h2>
-			<div className="article_block">
+			<div className={style.article_block}>
 				{
 					articleData
 				}

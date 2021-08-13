@@ -1,0 +1,28 @@
+.container {
+	display: flex;
+	width: 100%;
+} 
+
+.pic {
+	margin-right: 3%;
+}
+
+.pic .avatar {
+	width: 200px;
+	clip-path: circle(40% at center);
+}
+
+.info {
+	display: flex;
+	align-items: center;
+}
+
+.info ul {
+	margin: 0 40px;
+}
+
+.info li {
+	list-style-type: none;
+	margin: 16px 0;
+	font-size: 1.6rem;
+}

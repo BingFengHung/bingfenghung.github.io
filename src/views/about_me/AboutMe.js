@@ -1,6 +1,11 @@
+import './AboutMe.css';
+import Avatar from '../../components/Avatar/Avatar';
+
 function AboutMe() {
 	return (
-		<div>About Me</div>
+		<div className="container">
+			<Avatar/>
+		</div>
 	)
 }
 
