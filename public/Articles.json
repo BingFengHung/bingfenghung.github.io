@@ -1,0 +1,65 @@
+{
+    "CSharp": [{
+            "title": "C# 實作 EventAggregator 實現兩物件之間的溝通",
+            "description": "兩物件之間資料傳遞溝通",
+            "link": "Articles/CSharp/CSharp_實作EventAggregator實現兩物件之間的溝通/CSharp_實作EventAggregator實現兩物件之間的溝通.md",
+            "img": "Articles/CSharp/CSharp_實作EventAggregator實現兩物件之間的溝通/images/01.png"
+        },
+        {
+            "title": "C# 在多執行緒下確保只有一個物件實例化",
+            "description": "多執行下確保只有一個物件實例化",
+            "link": "Articles/CSharp/CSharp_在多執行緒下確保只有一個物件實例化/CSharp_在多執行緒下確保只有一個物件實例化.md",
+            "img": "Articles/CSharp/CSharp_在多執行緒下確保只有一個物件實例化/images/01.png"
+        }, {
+            "title": "C# 在 Winform 中內嵌其他應用程式及相關操作",
+            "description": "內嵌程式到 Winform 中",
+            "link": "Articles/CSharp/CSharp_在Winform中內嵌其他應用程式及相關操作/CSharp_在Winform中內嵌其他應用程式及相關操作.md",
+            "img": "Articles/CSharp/CSharp_在Winform中內嵌其他應用程式及相關操作/images/01.png"
+        }, {
+            "title": "C# sbyte 陣列轉換為 string",
+            "description": "sbyte 陣列轉為 string",
+            "link": "Articles/CSharp/CSharp_sbyte陣列轉換為string/CSharp_sbyte陣列轉換為string.md",
+            "img": "Articles/CSharp/CSharp_sbyte陣列轉換為string/images/01.png"
+        },
+        {
+            "title": "WPF - DataContext 與 Binding 之間的概念",
+            "description": "打好 DataContext 概念基礎",
+            "link": "Articles/CSharp/WPF_DataContext概念釐清/WPF_DataContext概念釐清.md",
+            "img": "Articles/CSharp/WPF_DataContext概念釐清/images/04.png"
+        }
+    ],
+    "JavaScript": [{
+        "title": "Node.js module.export 與 exports 之間的差異",
+        "description": "module.export 與 exports 內部的運作機制解說",
+        "link": "Articles/JavaScript/Node.jsModule.exports與exports之間的差異/Node.jsModule.exports與exports之間的差異.md",
+        "img": "Articles/JavaScript/Node.jsModule.exports與exports之間的差異/images/02.png"
+    }, {
+        "title": "JavaScript 函式多型實作",
+        "description": "JavaScript 也可以多型",
+        "link": "Articles/JavaScript/JavaScript函式多型實作/JavaScript函式多型實作.md",
+        "img": "Articles/JavaScript/JavaScript函式多型實作/images/05.png"
+    }],
+    "Python": [{
+        "title": "Python 函式基本教學",
+        "description": "Python 函式基本教學",
+        "link": "Articles/Python/Python函式基本教學/Python函式基本教學.md",
+        "img": "Articles/Python/Python函式基本教學/images/01.png"
+    }],
+    "Linux": [{
+        "title": "在 Windows 下使用 SCP 指令傳送檔案到 Linux",
+        "description": "Windows scp 指令傳送檔案到 Linux, 以及 Linux 傳送檔案至 Windows",
+        "link": "Articles/Linux/在Windows下使用SCP傳送檔案到Linux/在Windows下使用SCP傳送檔案到Linux.md",
+        "img": "Articles/Linux/在Windows下使用SCP傳送檔案到Linux/images/02.png"
+    }, {
+        "title": "Linux 開機自動執行指令",
+        "description": "開機排程執行",
+        "link": "Articles/Linux/Linux開機自動執行指令/Linux開機自動執行指令.md",
+        "img": "Articles/Linux/Linux開機自動執行指令/images/01.png"
+    }],
+    "Others": [{
+        "title": "Git 版本管控",
+        "description": "git commit message 簽章功能",
+        "link": "Articles/Others/GitCommitMessage簽章功能/GitCommitMessage簽章功能.md",
+        "img": "Articles/Others/GitCommitMessage簽章功能/images/01.png"
+    }]
+}

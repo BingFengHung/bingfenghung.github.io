@@ -1,0 +1,19 @@
+.content {
+	position: absolute;
+	bottom: 0;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, .5);
+	color: #f1f1f1;
+	width: 100%;
+	padding: 4% 6%;
+}
+
+.content h1 {
+	font-size: 2.8rem;
+	margin: 12px 0px;
+}
+
+.content p {
+	padding: 5px;
+	font-size: 1.5rem;
+}
