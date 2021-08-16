@@ -1,0 +1,23 @@
+.skill_container {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.skills {
+	width: 32%;
+}
+ul {
+	list-style-type: none;
+}
+
+.slills li {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.skills li p {
+	margin: 0 10px;
+	width: 50%;
+}

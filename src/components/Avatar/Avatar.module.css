@@ -18,11 +18,11 @@
 }
 
 .info ul {
-	margin: 0 40px;
+	margin: 0 10px;
 }
 
 .info li {
 	list-style-type: none;
 	margin: 16px 0;
-	font-size: 1.6rem;
+	font-size: 1.1rem;
 }
