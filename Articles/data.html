@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="shortcut icon" href="../public/images/favico.ico">
+    <link rel="stylesheet" href="../public/styles/reset.css">
+    <link rel="stylesheet" href="../public/styles/header.css">
+    <link rel="stylesheet" href="../public/styles/footer.css">
+     <link rel="stylesheet" href="../public/styles/home.css">
+    <style>
+        
+        #container {
+            padding: 20px 30px 50px;
+            background-color: white;
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="home" href="../index.html">
+        <i class="material-icons">home</i>
+    </a>
+
+    <header>
+        <div class="logo">
+            <a href="../">BingFeng</a>
+        </div>
+        <div class="topnav" id='myTopnav'>
+            <a href='javascript:void(0);' class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="../AboutMe/">關於我</a>
+            <a href="../Portfolio/">專案項目</a>
+            <a href="../Faq/">FAQ</a>
+        </div>
+    </header>
+
+    <div id="container"></div>
+
+    <footer>
+    </footer>
+
+    <script defer src="../public/scripts/webcomponents-loader.min.js"></script>
+
+    <script type="module">
+        WebComponents.waitFor(() => { let el = document.createElement('script'); el.src = '../public/scripts/zero-md.min.js'; document.head.appendChild(el); });
+    </script>
+
+    <script src="../public/scripts/header.js"></script>
+    <script>
+        const links = localStorage.getItem('links');
+        // mdElement.src = "../../" + links;
+        let div = document.getElementById('container');
+
+        let mdElement = document.createElement('zero-md')
+        mdElement.src = '../' + links;
+
+        div.appendChild(mdElement);
+    </script>
+</body>
+
+</html>
