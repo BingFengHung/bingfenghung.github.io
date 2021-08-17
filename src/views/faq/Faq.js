@@ -28,7 +28,6 @@ function Faq() {
 	const others_content = useRef(null);
 
 	function openTab(title, content, color) {
-		console.log('ins')
 		if (title === null || title.current === null) return;
 		let tab = [csharp, javascript, python, linux, others];
 		let tabContent = [csharp_tab_content, javascript_tab_content, python_tab_content, linux_tab_content, others_tab_content]
@@ -74,25 +73,33 @@ function Faq() {
 
 			let dataList = []
 			csharpDoc.forEach((element, idx) => {
-				dataList.push(<Card key={idx} title={element.title} description={element.description} img={element.img} link={element.link} />);
+				dataList.push(
+					<Card key={idx} title={element.title} description={element.description} img={element.img} link={element.link} />
+				);
 			});
 			setCSharpArticleData(dataList);
 
 			dataList = []
 			javascriptDoc.forEach((element, idx) => {
-				dataList.push(<Card key={idx} title={element.title} description={element.description} img={element.img} link={element.link} />);
-			});
+				dataList.push(
+					<Card key={idx} title={element.title} description={element.description} img={element.img} link={element.link} />
+					);
+				});
 			setJavaScriptArticleData(dataList);
 
 			dataList = []
 			pythonDoc.forEach((element, idx) => {
-				dataList.push(<Card key={idx} title={element.title} description={element.description} img={element.img} link={element.link} />);
+				dataList.push(
+				<Card key={idx} title={element.title} description={element.description} img={element.img} link={element.link} />
+					);
 			});
 			setPythonArticleData(dataList);
 
 			dataList = []
 			linuxDoc.forEach((element, idx) => {
-				dataList.push(<Card key={idx} title={element.title} description={element.description} img={element.img} link={element.link} />);
+				dataList.push(
+				<Card key={idx} title={element.title} description={element.description} img={element.img} link={element.link} />
+				);
 			});
 			setLinuxArticleData(dataList);
 
