@@ -22,7 +22,7 @@ function ArticleCard() {
 				});
 
 				for (let i of Object.keys(data)) {
-					dataList.push(<Card title={data[i][0].title} description={data[i][0].description} img={data[i][0].img} link={data[i][0].link} />);
+					dataList.push(<Card key={i} title={data[i][0].title} description={data[i][0].description} img={data[i][0].img} link={data[i][0].link} />);
 				}
 
 				let maxItem = [...counts].reduce((max, item) => {
@@ -31,7 +31,7 @@ function ArticleCard() {
 				}, "")
 
 				let items = data[maxItem][1]
-				dataList.push(<Card title={items.title} description={items.description} img={`../${items.img}`} link={items.link} />);
+				dataList.push(<Card key={items} title={items.title} description={items.description} img={`../${items.img}`} link={items.link} />);
 				setArticleData(dataList)
 			})
 	}, [])

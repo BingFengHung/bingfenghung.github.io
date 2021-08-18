@@ -24,11 +24,10 @@ marked.setOptions({
 
 function Articles(props) {
 	const [markdown, setMarkdown] = useState(null);
-	const links = localStorage.getItem("links") 
-	 const mdPath = '/' + links
-	console.log(links)
 
-	useEffect(() => {
+	useEffect(() => { 
+		const links = localStorage.getItem("links") 
+		const mdPath = '/' + links
 		fetch(mdPath)
 		.then(response => {
 			console.log(response)
@@ -42,7 +41,6 @@ function Articles(props) {
 	return (
 		<div className={styles.container} 
 		dangerouslySetInnerHTML={{__html: markdown}}>
-
 		</div>
 	)
 }
