@@ -23,6 +23,7 @@ function Header() {
 				<Link className="route" to="/AboutMe">關於我</Link>
 				<Link className="route" to="/Portfolio">專案項目</Link>
 				<Link className="route" to="/Faq">FAQ</Link>
+				<Link className="route" to="/Github">Github</Link>
 			</div>
 		</header>
 	)

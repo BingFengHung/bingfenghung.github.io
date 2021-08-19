@@ -1,0 +1,8 @@
+.container {
+	display: flex;
+}
+
+.avatar {
+	width: 30%;
+	height: 30%;
+}

@@ -1,0 +1,48 @@
+.container {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	background-color: white;
+	margin: 10px 0px;
+	padding: 20px 10px;
+	width: 80%;
+	box-shadow: 6px 6px 5px 2px rgba(60, 60, 60, .4);
+	cursor: pointer;
+}
+
+.container:hover {
+	box-shadow: 10px 10px 20px 5px rgba(30, 30, 30, .4);
+}
+
+.container ul {
+	display: flex;
+	padding: 0px;
+}
+
+.languageStatus {
+	margin: 0px 10px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	color: #57606a;
+	font-size: .9rem;
+}
+
+.langDots {
+	display: inline-block;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	margin: 0 5px 0 0;
+}
+
+.title {
+	color: #0969da;
+	font-size: 1rem;
+}
+
+.description {
+	color: #57606a;
+	font-size: .8rem;
+	overflow: hidden;
+	height: 80px;
+}

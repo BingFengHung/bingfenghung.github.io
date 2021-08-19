@@ -6,7 +6,7 @@ import background from '../../assets/OGA1IP0.jpg'
 
 function Home() {
 	return (
-		<div>
+		<div className={styles.container}>
 			<div className={styles.container}> 
 			<div> 
 				<img className={styles.backgroundImage} src={background} alt="playground" /> 
