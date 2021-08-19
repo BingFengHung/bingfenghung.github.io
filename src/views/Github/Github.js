@@ -1,6 +1,7 @@
 import styles from './Github.module.css';
 import { useEffect, useState } from 'react';
 import GithubCard from '../../components/GithubCard/GithubCard';
+import { Link } from 'react-router-dom';
 
 function Github() {
 	const [repositoyData, setRepositoryData] = useState([])
@@ -21,6 +22,16 @@ function Github() {
 			const response = await fetch(url);
 			const json = await response.json();
 
+			json.sort((a, b) => {
+				let aPushAt = a.pushed_at;
+				let bPushAt = b.pushed_at;
+				if(aPushAt > bPushAt) {
+					return -1;
+				} else if (aPushAt < bPushAt) {
+					return 1;
+				} else {return 0;}
+			})
+
 			for (let i of json) {
 				if (i.fork !== true) {
 					const languages = await fetchLangauges(i.languages_url);
@@ -29,8 +40,12 @@ function Github() {
 					Object.keys(languages).forEach(lang => {
 						langObj[lang] = (parseInt(languages[lang]) / total * 100).toFixed(2)
 					});
-					lists.push(<GithubCard key={i.name} title={i.name} languages={langObj}
-					description={i.description}/>)
+					
+					lists.push(
+						<Link to={`./GitContent`} onClick={() => localStorage.setItem("git_content_url", i.contents_url)}> 
+						<GithubCard key={i.name} title={i.name} languages={langObj} description={i.description}/> 
+						</Link>
+					)
 				}
 			}
 

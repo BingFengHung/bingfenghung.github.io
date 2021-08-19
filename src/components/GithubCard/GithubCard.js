@@ -1,5 +1,6 @@
 import styles from './GithubCard.module.css'
 import { useState, useEffect } from "react";
+
 function GithubCard(props) {
 	const languages = props.languages;
 	const [langList, setLangList] = useState([]);

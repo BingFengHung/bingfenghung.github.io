@@ -30,7 +30,6 @@ function Articles(props) {
 		const mdPath = '/' + links
 		fetch(mdPath)
 		.then(response => {
-			console.log(response)
 			return response.text()
 		})
 		.then(text => {
