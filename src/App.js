@@ -7,7 +7,9 @@ import Github from './views/Github/Github';
 import GitContent from './views/GitContent/GitContent';
 import Header from './components/header/Header';
 import Articles from './views/Articles/Articles';
+import TodoList from './views/TodoList/TodoList';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
+import Documents from './views/Documents/Documents';
 
 function App() {
   return (
@@ -34,6 +36,12 @@ function App() {
         </Route>
         <Route path="/GitContent">
           <GitContent/>
+        </Route>
+        <Route path="/Documents">
+          <Documents/>
+        </Route>
+        <Route path="/TodoList">
+          <TodoList/>
         </Route>
       </Switch>
     </Router>

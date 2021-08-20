@@ -44,23 +44,14 @@ const GitContent = () => {
 						.then(res => res.json())
 						.then(data => {
 							let base64 = data.content
-							// console.log(base64)
-							// console.log(atob(base64))
-							// console.log(decodeURIComponent(atob(base64)))
 							 let content = decodeURIComponent(escape(atob(base64)));
 							 let imgUrl = url.replace("https://api.github.com/repos", "https://raw.githubusercontent.com");
 							 imgUrl = imgUrl.replace("contents", branch + "/")
 
-							 // https://api.github.com/repos/BingFengHung/XamarinFormsDrawShape/contents
-							 // https://raw.githubusercontent.com/BingFengHung/XamarinFormsDrawShape/main/Images/2021-07-14-17-05-49.png
-							 // https://raw.githubusercontent.com/BingFengHung/XamarinFormsDrawShape/main/Images/2021-07-14-17-05-49.png
 							 content = content.replace("![](./", "![]("+ imgUrl)
 							 content = content.replace('src="./', 'src="'+ imgUrl)
 							 content = content.replace(">](.", ">](" + imgUrl)
-							 // https://api.github.com/repos/BingFengHung/XamarinFormsDrawShape/contents
-							// console.log(unescape(decodeURIComponent(atob(base64))))
 							try {
-								// setContent(marked(decodeURIComponent(escape(atob(base64)))))
 								setContent(marked(content))
 							} catch (error) {
 

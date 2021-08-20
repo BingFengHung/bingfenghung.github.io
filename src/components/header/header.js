@@ -24,6 +24,7 @@ function Header() {
 				<Link className="route" to="/Portfolio">專案項目</Link>
 				<Link className="route" to="/Faq">FAQ</Link>
 				<Link className="route" to="/Github">Github</Link>
+				<Link className="route" to="/Documents">技術文章</Link>
 			</div>
 		</header>
 	)
