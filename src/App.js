@@ -5,6 +5,7 @@ import AboutMe from './views/about_me/AboutMe';
 import Portfolio from './views/portfolio/Portfolio';
 import Github from './views/Github/Github';
 import GitContent from './views/GitContent/GitContent';
+import DocumentContent from './views/DocumentContent/DocumentContent'
 import Header from './components/header/Header';
 import Articles from './views/Articles/Articles';
 import TodoList from './views/TodoList/TodoList';
@@ -39,6 +40,9 @@ function App() {
         </Route>
         <Route path="/Documents">
           <Documents/>
+        </Route>
+        <Route path="/DocumentContent">
+          <DocumentContent/>
         </Route>
         <Route path="/TodoList">
           <TodoList/>

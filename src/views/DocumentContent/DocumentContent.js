@@ -1,4 +1,4 @@
-import styles from './GitContent.module.css';
+import styles from './DocumentContent.module.css';
 import { useEffect, useState } from "react";
 import marked from 'marked'
 import hljs from 'highlight.js'
@@ -23,32 +23,14 @@ const GitContent = () => {
 
 	useEffect(() => {
 		let url = localStorage.getItem("git_content_url");
-		url = url.replace("/{+path}", "");
 
 		fetch(url)
 			.then(res => res.json())
 			.then(data => {
-				console.log(JSON.stringify(data))
-				let readMeUrl = data.find(element => {
-					if (element.name === "README.md") {
-						return element.url;
-					}
-					else {
-						return "";
-					}
-				});
-
-				if (readMeUrl) {
-					let branch = readMeUrl.url;
-					branch = branch.substring(branch.indexOf("ref=")).replace("ref=", "");
-
-					fetch(readMeUrl.url)
-						.then(res => res.json())
-						.then(data => {
 							let base64 = data.content
 							 let content = decodeURIComponent(escape(atob(base64)));
 							 let imgUrl = url.replace("https://api.github.com/repos", "https://raw.githubusercontent.com");
-							 imgUrl = imgUrl.replace("contents", branch + "/")
+							 imgUrl = imgUrl.replace("contents", "main" + "/")
 
 							 content = content.replace("![](./", "![]("+ imgUrl)
 							 content = content.replace('src="./', 'src="'+ imgUrl)
@@ -60,8 +42,6 @@ const GitContent = () => {
 								setContent("")
 							}
 						})
-				}
-			})
 	}, []);
 
 	return (
