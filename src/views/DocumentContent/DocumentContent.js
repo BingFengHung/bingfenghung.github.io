@@ -40,15 +40,11 @@ const GitContent = () => {
 				fetch(item.url)
 					.then(res => res.json())
 					.then(data => {
-						console.log('1')
 						let base64 = data.content
-						console.log('1')
 						let content = decodeURIComponent(escape(atob(base64)));
-						console.log('1')
 						let imgUrl = "https://raw.githubusercontent.com/BingFengHung/OpenDocuments/main/"
 
-						if(images.path) {
-							console.log('in') 
+						if(images && images.path) {
 							imgUrl += images.path;
 						imgUrl = encodeURI(imgUrl);
 						imgUrl = imgUrl.replace(/#/g, '%23');

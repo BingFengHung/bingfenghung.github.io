@@ -8,7 +8,7 @@ import GitContent from './views/GitContent/GitContent';
 import DocumentContent from './views/DocumentContent/DocumentContent'
 import Header from './components/header/Header';
 import Articles from './views/Articles/Articles';
-import TodoList from './views/TodoList/TodoList';
+import Target from './views/Target/Target';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
 import Documents from './views/Documents/Documents';
 
@@ -44,8 +44,8 @@ function App() {
         <Route path="/DocumentContent">
           <DocumentContent/>
         </Route>
-        <Route path="/TodoList">
-          <TodoList/>
+        <Route path="/Todos">
+          <Target/>
         </Route>
       </Switch>
     </Router>

@@ -2,10 +2,14 @@ import styles from './Github.module.css';
 import { useEffect, useState } from 'react';
 import GithubCard from '../../components/GithubCard/GithubCard';
 import { Link } from 'react-router-dom';
+import Loading from '../../components/Loading/Loading';
 
 function Github() {
 	const [repositoyData, setRepositoryData] = useState([])
 	const [avatar, setAvatar] = useState()
+	const [cssDisplay, setCssDisplay] = useState({
+		display: "display",
+	});
 
 	useEffect(() => {
 		const url = 'https://api.github.com/users/BingFengHung/repos'
@@ -59,6 +63,7 @@ function Github() {
 		fetchData(url).then(data => 
 			{
 				setRepositoryData(data)
+				setCssDisplay({display: 'none'})
 			})
 
 	}, []);
@@ -75,6 +80,9 @@ function Github() {
 			<ul>
 				{repositoyData}
 			</ul>
+			<div style={cssDisplay}> 
+				<Loading/>
+			</div>
 		</div>
 	)
 }

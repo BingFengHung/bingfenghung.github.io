@@ -29,11 +29,11 @@ function convertToTree(markdownContent) {
 		if (el.startsWith('# ')) {
 			tree[el] = {}
 		} else if (el.startsWith('## ')) {
-			let [lastElement, idx] = findPrevious(contentList, el, '# ');
+			let [lastElement] = findPrevious(contentList, el, '# ');
 			tree[lastElement][el] = {}
 		} else if (el.startsWith('### ')) {
-			let [lastElement2, idx2] = findPrevious(contentList, el, '## ');
-			let [lastElement, idx] = findPrevious(contentList, lastElement2, '# ');
+			let [lastElement2] = findPrevious(contentList, el, '## ');
+			let [lastElement] = findPrevious(contentList, lastElement2, '# ');
 
 			tree[lastElement][lastElement2][el] = {}
 		} else if (el.startsWith('-')) {
