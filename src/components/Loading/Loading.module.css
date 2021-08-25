@@ -2,11 +2,11 @@
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	transform: translate(-109px, -94px);
-		-o-transform: translate(-109px, -94px);
-		-ms-transform: translate(-109px, -94px);
-		-webkit-transform: translate(-109px, -94px);
-		-moz-transform: translate(-109px, -94px);
+	transform: translate(-80px, -80px);
+		-o-transform: translate(-80px, -80px);
+		-ms-transform: translate(-80px, -80px);
+		-webkit-transform: translate(-80px, -80px);
+		-moz-transform: translate(-80px, -80px);
 }
 
 .cssload-tetromino {

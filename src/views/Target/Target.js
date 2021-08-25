@@ -1,10 +1,14 @@
 import style from './Target.module.css'
 import { useEffect, useState } from "react";
 import { marked } from '../../utils/markdown'
+import Tabs from '../../components/Tabs/Tabs';
+import TabList from '../../components/Tabs/TabList';
+import Tab from '../../components/Tabs/Tab';
+import Button	from '../../components/Tabs/Button';
+import TabPanel from '../../components/Tabs/TabPanel';
 
 function Target() {
 	const [content, setContent] = useState("");
-	const [date, setData] = useState('');
 	const url = "https://api.github.com/repos/BingFengHung/personal_target";
 
 	useEffect(() => {
@@ -45,11 +49,28 @@ function Target() {
 			}, []); 
 			
 			return ( 
-				<div>
-					<div><p>{date}</p></div>
-			<div className={style.container}
-			dangerouslySetInnerHTML={{__html:content}}></div>
-				</div>
+				<Tabs selected={1}>
+					<TabList>
+						<Tab>
+							<Button>Foo</Button>
+						</Tab>
+						<Tab>
+							<Button>Bar</Button>
+						</Tab>
+						<Tab>
+							<Button>Baz</Button>
+						</Tab>
+					</TabList>
+
+					<TabPanel> 
+						<div> 
+							<div className={style.container} dangerouslySetInnerHTML={{__html:content}}></div> 
+							</div>
+						</TabPanel>
+					<TabPanel>Related to bar</TabPanel>
+					<TabPanel>Related to baz</TabPanel>
+
+				</Tabs>
 			) 
 		}
 

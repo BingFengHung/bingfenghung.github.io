@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+
+.Tabs {
+  height: 100%;
+  display: flex;
+}
+
+.TabList {
+  width: 10rem;
+  background: #263238;
+}
+
+.TabPanel {
+  flex: 1;
+  display: none;
+  padding: 1.5rem 2rem;
+}
+.TabPanel.is-active {
+  display: block;
+}
+
+.Button {
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+.Button:focus,
+.Button:hover {
+  outline: 0;
+  background: #37474F;
+}
+.Tab.is-active .Button {
+  background: #0091EA;
+}

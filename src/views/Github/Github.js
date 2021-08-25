@@ -76,7 +76,14 @@ function Github() {
 
 	return (
 		<div className={styles.container}>
-			<img className={styles.avatar} src={avatar} alt="bingfeng"/>
+			<div> 
+				<img className={styles.avatar} src={avatar} alt="bingfeng"/>
+				<div>HTML</div>
+				<div>CSS</div>
+				<div>JavaScript</div>
+				<div>C#</div>
+				<div>Python</div>
+			</div>
 			<ul>
 				{repositoyData}
 			</ul>
